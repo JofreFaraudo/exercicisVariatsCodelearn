@@ -1,0 +1,30 @@
+#define I "110"
+#define F "111"
+const String E[2] = {"100","101"};
+void setup() {
+  pinMode(13,OUTPUT);
+}
+void loop() {
+  startEmeting(random(1));
+  delay(random(600,1200));
+}
+void startEmeting(int e){
+  sendData(I);
+  sendData(E[e]);
+  for(int i = random(10);i>0;i--){
+    sendData(codes[random(1,5)]);
+  }
+  sendData(F);
+  digitalWrite(13,0);
+  delay(3000);
+}
+void sendData(String data){
+  int numOfOnes = 0;
+  for(int i = 0; i<data.length; i++){
+    if(data[i].toInt() == 1)
+      numOfOnes++;
+    digitalWrite(13,data[i].toInt());
+    delay(500);
+  }
+  digitalWrite(13,numOfOnes%2);
+}

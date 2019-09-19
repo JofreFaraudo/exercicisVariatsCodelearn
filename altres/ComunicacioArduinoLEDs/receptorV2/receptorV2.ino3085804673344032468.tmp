@@ -1,0 +1,20 @@
+#define d 100
+void setup() {
+  pinMode(A0,INPUT);
+  Serial.begin(115200);
+}
+void loop() {
+  while(analogRead(A0)>850);
+  delay(d);
+  if(analogRead(A0)>850){
+    delay(d);
+    if(analogRead(A0)<850){
+      delay(d);
+      if(analogRead(A0)<850){
+        delay(d);
+        Serial.println("Transmissio en curs..");
+      }
+    }
+  }
+  delay(d);
+}

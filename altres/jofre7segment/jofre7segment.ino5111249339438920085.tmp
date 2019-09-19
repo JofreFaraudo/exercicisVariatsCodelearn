@@ -1,0 +1,38 @@
+#define M1 2
+#define TR1 3
+#define T1 4
+#define TL1 5
+#define RB1 6
+#define b1 7
+#define LB1 8
+#define Dp1 9
+#define M2 10
+#define TR2 11
+#define T2 12
+#define TL2 13
+#define RB2 14
+#define b2 15
+#define LB2 16
+#define Dp2 17
+int nums[10][7] = {{TL1,TL2,}};
+void setup() {
+  pinMode(M1,OUTPUT);
+  pinMode(TR1,OUTPUT);
+  pinMode(T1,OUTPUT);
+  pinMode(TL1,OUTPUT);
+  pinMode(RB1,OUTPUT);
+  pinMode(b1,OUTPUT);
+  pinMode(LB1,OUTPUT);
+  pinMode(Dp1,OUTPUT);
+  pinMode(M2,OUTPUT);
+  pinMode(TR2,OUTPUT);
+  pinMode(T2,OUTPUT);
+  pinMode(TL2,OUTPUT);
+  pinMode(RB2,OUTPUT);
+  pinMode(b2,OUTPUT);
+  pinMode(LB2,OUTPUT);
+  pinMode(Dp2,OUTPUT);
+}
+void loop() {
+  
+}

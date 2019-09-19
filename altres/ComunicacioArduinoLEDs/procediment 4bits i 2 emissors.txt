@@ -1,0 +1,14 @@
+S1:1001
+S2:1010
+I:1100
+F:1111
+Escolto el medi.
+rebo: 1100
+Descobreixo qui és:
+	1.1001
+	2.1010
+	else:tornar a començar (si en 10 segons no es rep res o codi no vàlid)
+Escolto missatge i el guardo. Quan:
+	1. rebo: 1111
+	2. Han passat renta segons i no s'ha acabat
+	retorno

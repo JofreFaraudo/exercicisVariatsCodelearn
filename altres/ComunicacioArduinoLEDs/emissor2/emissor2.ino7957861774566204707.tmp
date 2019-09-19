@@ -1,0 +1,23 @@
+#define E1 1001
+#define E2 1010
+#define I 1100
+#define F 1111
+const unsigned int codes[6][3] = {{1,0,1,0},{0,0,1},{0,1,1},{1,0,0},{1,1,0},{1,1,1}};
+void setup() {
+  pinMode(13,OUTPUT);
+}
+void loop() {
+  sendData(codes[0]);
+  for(int i = random(10);i>0;i--){
+    sendData(codes[random(1,5)]);
+  }
+  sendData(codes[5]);
+  digitalWrite(13,0);
+  delay(3000);
+}
+void sendData(int data[]){
+  for(int i = 0; i<3; i++){
+    digitalWrite(13,data[i]);
+    delay(500);
+  }
+}

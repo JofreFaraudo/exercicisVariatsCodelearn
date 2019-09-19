@@ -1,0 +1,22 @@
+#define numberOfLEDs 3
+int LEDsPins[numberOfLEDs] = {9,10,11};
+unsigned int interval = 20;
+unsigned int turn = 0;
+unsigned int power = 255;
+void setup() {
+  Serial.begin(9600);
+  for(int LED = 0; LED<=numberOfLEDs; LED++)
+    pinMode(LEDsPins[LED],OUTPUT);
+}
+void loop() {
+  if(Serial.available()){
+    
+  }
+  for(int LED = 0; LED<=numberOfLEDs; LED++)
+    digitalWrite(LEDsPins[LED],LOW);
+  analogWrite(LEDsPins[turn%3],power);
+  Serial.println(turn);
+  Serial.println(turn%3);
+  delay(interval*10);
+  turn++;
+}

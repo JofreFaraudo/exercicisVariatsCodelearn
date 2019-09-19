@@ -1,0 +1,32 @@
+#define d 50
+#define v 200
+#define I "1100"
+#define F "1111"
+#define S1 "1001"
+#define S2 "1010"
+int e;
+void setup() {
+  pinMode(A0,INPUT);
+  Serial.begin(115200);
+}
+void loop() {
+  while(analogRead(A0)<v);
+  if(readSerial() == "1100"){
+    Serial.println("Transmissio en curs..");
+    if(){
+    }
+    Serial.println("Rebent missatge de l\'emissor: ");
+    while(true){
+      Serial.println(analogRead(A0)>v);
+    }
+  }
+}
+int bool readSerial(){
+  String val = "";
+  for(int i = 0; i<3;i++){
+    val += analogRead(A0)>v;
+    delay(d);
+  }
+  return val;
+}
+
